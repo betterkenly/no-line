@@ -9,10 +9,13 @@
   },
   
   "passport": {
-    "facebook": {},
+    "facebook": {
+      "clientID": "130860670868137",
+      "clientSecret": "7c7a1da5218600d5d54fd04005408099",
+      "callbackURL": "http://localhost:3000/auth/facebook/callback"
+     },
     "google": {},
     "twitter": {}
   },
-
   "redis": {}
 }

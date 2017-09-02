@@ -18,6 +18,7 @@ dump.rdb
 # config
 config/development.json
 config/production.json
+config/default.json
 
 # database
 database
