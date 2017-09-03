@@ -15,7 +15,7 @@ class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <h3>Application Content</h3>
+        <h1>We Just Hired A Few Japanese Waitress!</h1>
       </Layout>
     );
   }

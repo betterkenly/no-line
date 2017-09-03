@@ -27,7 +27,8 @@ class Layout extends React.Component {
 
   render() {
     const menus = [
-      {href: '/', name: 'Order'},
+      {href: '/', name: 'News'},
+      {href: '/order', name: 'Order'},      
       {href: '/history', name: 'History'},
       {href: '/settings', name: 'Settings'},
       {href: '/about', name: 'About'}
