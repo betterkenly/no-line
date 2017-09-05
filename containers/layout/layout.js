@@ -53,9 +53,9 @@ class Layout extends React.Component {
             width='thin'
           >
             {menus.map((menu, index) => 
-              <Menu.Item link={true} key={index}>
-                <Link href={menu.href}><a>{menu.name}</a></Link>
-              </Menu.Item>
+              <Link href={menu.href}>
+                <Menu.Item link={true} key={index}>{menu.name}</Menu.Item>
+              </Link>
             )}
             <Auth />
           </Sidebar>

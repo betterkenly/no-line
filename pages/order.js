@@ -1,8 +1,7 @@
-import orderLayout from '../components/layout/orderLayout';
 import Layout from '../components/layout/layout';
-import Menu from '../components/order/menu';
-import Previous from '../components/order/previous';
-import Favorite from '../components/order/favorite';
+import Menu from '../pages/order/menu';
+import Previous from '../pages/order/previous';
+import Favorite from '../pages/order/favorite';
 
 class Order extends React.Component {
   constructor(props) {
@@ -28,10 +27,9 @@ class Order extends React.Component {
   }
 
   render() {
-    if (this.state.subpage === 'Menu') {
+    const subPage = this.state.subpage === 'Menu' ? <Menu /> : this.state.subpage === 'Previous' ? <Previous /> : <Favorite />;
       return (
         <Layout>
-          <orderLayout>
             <div>
               <div>
                 Order
@@ -40,43 +38,9 @@ class Order extends React.Component {
               <a onClick={this.handlePrevious} >Previous</a>
               <a onClick={this.handleFavorite} >Favorite</a>
             </div>
-            <Menu />
-          </orderLayout>
+            { subPage }
         </Layout>
       )
-    } else if (this.state.subpage === 'Previous') {
-      return (
-        <Layout>
-          <orderLayout>
-            <div>
-              <div>
-                Order
-              </div>
-              <a onClick={this.handleMenu} >Menu</a>
-              <a onClick={this.handlePrevious} >Previous</a>
-              <a onClick={this.handleFavorite} >Favorite</a>
-            </div>
-            <Previous />
-          </orderLayout>
-        </Layout>
-      )
-    } else if (this.state.subpage === 'Favorite') {
-      return (
-        <Layout>
-          <orderLayout>
-            <div>
-              <div>
-                Order
-              </div>
-              <a onClick={this.handleMenu} >Menu</a>
-              <a onClick={this.handlePrevious} >Previous</a>
-              <a onClick={this.handleFavorite} >Favorite</a>
-            </div>
-            <Favorite />
-          </orderLayout>
-        </Layout>
-      )
-    }
   }
 
 }
